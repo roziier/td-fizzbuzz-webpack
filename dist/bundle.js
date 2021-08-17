@@ -9,6 +9,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ret_multipleof__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _ret_2multipleof__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* module decorator */ module = __webpack_require__.hmd(module);
+
 // import "./css/back.scss";
 
 
@@ -20,13 +21,43 @@ const stepOne = () => {
   (0,_ret_2multipleof__WEBPACK_IMPORTED_MODULE_2__.default)(numFromTo, 3, 5, "FizzBuzz");
   (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 3, "Fizz");
   (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 5, "Buzz");
-
   return numFromTo;
 };
 
 console.log(stepOne());
 
-module.exports = stepOne;
+// STEP 2
+const stepTwo = (val1, val2) => {
+  const numFromTo = (0,_my_range__WEBPACK_IMPORTED_MODULE_0__.default)(val1, val2);
+  (0,_ret_2multipleof__WEBPACK_IMPORTED_MODULE_2__.default)(numFromTo, 3, 5, "FizzBuzz");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 3, "Fizz");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 5, "Buzz");
+  return numFromTo;
+};
+
+console.log(stepTwo(21, 25));
+
+// STEP 3
+const stepThree = () => {
+  const numFromTo = (0,_my_range__WEBPACK_IMPORTED_MODULE_0__.default)(11, 44);
+  (0,_ret_2multipleof__WEBPACK_IMPORTED_MODULE_2__.default)(numFromTo, 7, 11, "FooBoo");
+  (0,_ret_2multipleof__WEBPACK_IMPORTED_MODULE_2__.default)(numFromTo, 3, 5, "FizzBuzz");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 3, "Fizz");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 5, "Buzz");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 7, "Foo");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 11, "Boo");
+  return numFromTo;
+};
+
+console.log(stepThree());
+
+const allSteps = {
+  one: stepOne,
+  two: stepTwo,
+  three: stepThree,
+};
+
+module.exports = allSteps;
 
 
 /***/ }),

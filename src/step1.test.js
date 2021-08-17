@@ -1,7 +1,7 @@
-const stepOne = require("./index");
+const { one } = require("./index");
 
 test("test step 1", () => {
-  expect(stepOne()).toEqual([
+  expect(one()).toEqual([
     1,
     2,
     "Fizz",
