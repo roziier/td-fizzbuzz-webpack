@@ -8,9 +8,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _my_range__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _ret_multipleof__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _ret_2multipleof__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _small_big__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 /* module decorator */ module = __webpack_require__.hmd(module);
-
 // import "./css/back.scss";
+
 
 
 
@@ -51,6 +52,21 @@ const stepThree = () => {
 
 console.log(stepThree());
 
+// STEP 4
+const stepFour = () => {
+  const numFromTo = (0,_my_range__WEBPACK_IMPORTED_MODULE_0__.default)(11, 97);
+  (0,_small_big__WEBPACK_IMPORTED_MODULE_3__.default)(numFromTo, 16, 95, "Small", "Big");
+  (0,_ret_2multipleof__WEBPACK_IMPORTED_MODULE_2__.default)(numFromTo, 7, 11, "FooBoo");
+  (0,_ret_2multipleof__WEBPACK_IMPORTED_MODULE_2__.default)(numFromTo, 3, 5, "FizzBuzz");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 3, "Fizz");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 5, "Buzz");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 7, "Foo");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 11, "Boo");
+  return numFromTo;
+};
+
+console.log(stepFour());
+
 const allSteps = {
   one: stepOne,
   two: stepTwo,
@@ -88,7 +104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-// CREATE ARRAY WITH DESIRE NUMBERS
+// CREATE SMALL AND BIG
 const multipleOf = function (range, num, string) {
   range.map((x, i, arr) => {
     if (x % num === 0) {
@@ -118,6 +134,27 @@ const doubleMultipleOf = function (range, num1, num2, string) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (doubleMultipleOf);
+
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const smallBig = function (range, num1, num2, string1, string2) {
+  range.map((x, i, arr) => {
+    if (x < num1) {
+      return (arr[i] = string1);
+    } else if (x > num2) {
+      return (arr[i] = string2);
+    }
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (smallBig);
 
 
 /***/ })

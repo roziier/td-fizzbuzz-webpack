@@ -2,6 +2,7 @@
 import myRange from "./my-range";
 import multipleOf from "./ret-multipleof";
 import doubleMultipleOf from "./ret-2multipleof";
+import smallBig from "./small-big";
 
 // STEP 1
 const stepOne = () => {
@@ -39,10 +40,26 @@ const stepThree = () => {
 
 console.log(stepThree());
 
+// STEP 4
+const stepFour = () => {
+  const numFromTo = myRange(11, 97);
+  smallBig(numFromTo, 16, 95, "Small", "Big");
+  doubleMultipleOf(numFromTo, 7, 11, "FooBoo");
+  doubleMultipleOf(numFromTo, 3, 5, "FizzBuzz");
+  multipleOf(numFromTo, 3, "Fizz");
+  multipleOf(numFromTo, 5, "Buzz");
+  multipleOf(numFromTo, 7, "Foo");
+  multipleOf(numFromTo, 11, "Boo");
+  return numFromTo;
+};
+
+console.log(stepFour());
+
 const allSteps = {
   one: stepOne,
   two: stepTwo,
   three: stepThree,
+  four: stepFour,
 };
 
 module.exports = allSteps;
