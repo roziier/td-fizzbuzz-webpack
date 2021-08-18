@@ -67,10 +67,21 @@ const stepFour = () => {
 
 console.log(stepFour());
 
+// STEP 5
+const stepFive = () => {
+  const numFromTo = (0,_my_range__WEBPACK_IMPORTED_MODULE_0__.default)(1, 100);
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 3, "Buzz");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 5, "Fizz");
+  return numFromTo;
+};
+
+console.log(stepFive());
+
 const allSteps = {
   one: stepOne,
   two: stepTwo,
   three: stepThree,
+  four: stepFour,
 };
 
 module.exports = allSteps;

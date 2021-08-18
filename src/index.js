@@ -55,11 +55,22 @@ const stepFour = () => {
 
 console.log(stepFour());
 
+// STEP 5
+const stepFive = () => {
+  const numFromTo = myRange(1, 100);
+  multipleOf(numFromTo, 3, "Buzz");
+  multipleOf(numFromTo, 5, "Fizz");
+  return numFromTo;
+};
+
+console.log(stepFive());
+
 const allSteps = {
   one: stepOne,
   two: stepTwo,
   three: stepThree,
   four: stepFour,
+  five: stepFive,
 };
 
 module.exports = allSteps;
