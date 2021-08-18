@@ -77,11 +77,23 @@ const stepFive = () => {
 
 console.log(stepFive());
 
+// STEP 6
+const stepSix = () => {
+  const numFromTo = (0,_my_range__WEBPACK_IMPORTED_MODULE_0__.default)(24, 50);
+  (0,_ret_2multipleof__WEBPACK_IMPORTED_MODULE_2__.default)(numFromTo, 3, 5, "FTW");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 3, "GG");
+  (0,_ret_multipleof__WEBPACK_IMPORTED_MODULE_1__.default)(numFromTo, 5, "GG");
+  return numFromTo;
+};
+
+console.log(stepSix());
+
 const allSteps = {
   one: stepOne,
   two: stepTwo,
   three: stepThree,
   four: stepFour,
+  five: stepFive,
 };
 
 module.exports = allSteps;
